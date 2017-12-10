@@ -14,7 +14,7 @@ namespace PracticeSetTest
 	{
 		AccountPage ap = new AccountPage();
 		HelperClass hc = new HelperClass();
-		string path = @"C:\Users\Krishna\Desktop\Data.xlsx";
+		string path = @"DataSource\Data.xlsx";
 
 		[Test]
 		public void CreateAccountFromDataSource()
@@ -22,8 +22,7 @@ namespace PracticeSetTest
 			ap.ClickOnSalesTab();
 			ap.ClickOnAccountsTab();
 			ap.ClickOnCreateLink();
-			string data = hc.ReadDataFromExcel(@"C:\Users\Krishna\Desktop\Data.xlsx","Account", 0,0);
-			//C:\Users\Krishna\Desktop
+			
 			string accountName = hc.ReadDataFromExcel(path, "Account", 1, 0);
 			string streeName = hc.ReadDataFromExcel(path, "Account", 1, 1);
 			string city = hc.ReadDataFromExcel(path, "Account", 1, 2);

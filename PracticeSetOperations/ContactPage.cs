@@ -9,6 +9,7 @@ namespace PracticeSetOperations
 	public class ContactPage
 	{
 		public void CreateContact()
-		{ }
+		{
+		}
 	}
 }
