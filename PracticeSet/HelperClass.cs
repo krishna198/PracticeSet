@@ -35,6 +35,18 @@ namespace PracticeSetFramework
 			element.SendKeys(text);
 		}
 
+		public void SelectElementByText(IWebElement element, string text)
+		{
+			SelectElement se = new SelectElement(element);
+			se.SelectByText(text);
+		}
+
+		public void SelectElementByText(IWebElement element, int index)
+		{
+			SelectElement se = new SelectElement(element);
+			se.SelectByIndex(index);
+		}
+
 		public void WaitForElement(By element)
 		{
 			WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
