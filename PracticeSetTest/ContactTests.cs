@@ -16,11 +16,11 @@ namespace PracticeSetTest
 		AccountPage ap = new AccountPage();
 		LoginLogout ll = new LoginLogout();
 		HelperClass hc = new HelperClass();
+		ContactPage cp = new ContactPage();
 				
-		[Test]
+		[Test, Ignore("Not implemented")]
 		public void CreateContact()
 		{
-			//hc.ReadDataFromExcel("");
 			ap.CreateAccount();
 		}
 
@@ -29,6 +29,10 @@ namespace PracticeSetTest
 		[Test]
 		public void VerifyLastNameOfContactDoesNotAcceptBlank()
 		{
+			ap.ClickOnSalesTab();
+			cp.OpenCreateContactAndClickOnSaveButton();
+			Assert.AreEqual(cp.getLastNameFieldValidationMessage().ToLower(), "Missing required field: Last Name".ToLower(),
+					"The validation message is not displayed when we enter blank in last name");
 		}
 
 		

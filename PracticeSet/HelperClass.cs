@@ -52,95 +52,28 @@ namespace PracticeSetFramework
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             wait.Until(ExpectedConditions.ElementIsVisible(element));
         }
-
-        public void WriteDataToExcelsheet(string path)
-		{
-			Spreadsheet document = new Spreadsheet();
-
-			// add new worksheet
-			Worksheet Sheet = document.Workbook.Worksheets.Add("FormulaDemo");
-
-			// headers to indicate purpose of the column
-			Sheet.Cell("A1").Value = "Formula (as text)";
-			// set A column width
-			Sheet.Columns[0].Width = 250;
-
-			Sheet.Cell("B1").Value = "Formula (calculated)";
-			// set B column width
-			Sheet.Columns[1].Width = 250;
-
-
-			// write formula as text 
-			Sheet.Cell("A2").Value = "7*3+2";
-			// write formula as formula
-			Sheet.Cell("B2").Value = "=7*3+2";
-
-			// delete output file if exists already
-			if (File.Exists("Output.xls"))
-			{
-				File.Delete("Output.xls");
-			}
-
-			// Save document
-			document.SaveAs("Output.xls");
-
-			// Close Spreadsheet
-			document.Close();
-
-			// open generated XLS document in default program
-			Process.Start("Output.xls");
-			/*
-			Application ExcelObj = new Application();
-			Workbook theWorkbook = ExcelObj.Workbooks.Open(@"D:\ContactDetailsofGICEmployee.xls", 0, true, 
-				5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-			Sheets sheets = theWorkbook.Worksheets;
-			Worksheet worksheet = (Worksheet)theWorkbook.Worksheets.get_Item(1);
-			Range range = worksheet.UsedRange;
-			int r = range.Rows.Count;
-			dt.Columns.Add("EmpCode");
-			dt.Columns.Add("EmpName");
-			dt.Columns.Add("Email");
-			dt.Columns.Add("ContactNo");
-			for (int i = 1; i <= r; i++)
-			{
-				DataRow dr = dt.NewRow();
-				dr["EmpCode"] = Convert.ToString((worksheet.Cells[i, 1] as Microsoft.Office.Interop.Excel.Range).Value2);
-				dr["EmpName"] = Convert.ToString((worksheet.Cells[i, 2] as Microsoft.Office.Interop.Excel.Range).Value2);
-				dr["Email"] = Convert.ToString((worksheet.Cells[i, 3] as Microsoft.Office.Interop.Excel.Range).Value2);
-				dr["Cont"] = Convert.ToString((worksheet.Cells[i, 4] as Microsoft.Office.Interop.Excel.Range).Value2);
-				dt.Rows.Add(dr);
-			}
-			return dr;
-			 */
-		}
-
+		        
 		public string ReadDataFromExcel(string path, string sheetName, int row, int col)
 		{
-			Spreadsheet document = new Spreadsheet();
-			document.LoadFromFile(path);
-
-			// Get worksheet by name
-			Worksheet worksheet = document.Workbook.Worksheets.ByName(sheetName);
 			string data = "";
-			data = worksheet.Cell(row, col).ValueAsString;
-			// Check dates
-			//for (int i = 0; i < 4; i++)
-			//{
-			//	// Set current cell
-			//	Cell currentCell = worksheet.Cell(i, 0);
+			Spreadsheet document = new Spreadsheet();
+			try
+			{
+				string startupPath = AppDomain.CurrentDomain.BaseDirectory;
+				
+				document.LoadFromFile(startupPath + path);
+				Worksheet worksheet = document.Workbook.Worksheets.ByName(sheetName);
 
-			//	//DateTime date = currentCell.ValueAsDateTime;
-			//	data = currentCell.ValueAsString;
-			//	// Write Date
-			//	//Console.WriteLine("{0}", date.ToShortDateString());
-			//}
-			// Close document
-			document.Close();
-
-			// Write message
-			//Console.Write("Press any key to continue...");
-
-			// Wait user input
+				data = worksheet.Cell(row, col).ValueAsString;				
+			}
+			catch (Exception e)
+			{
+				string mess = e.Message;
+			}
+			finally
+			{
+				document.Close();
+			}
 			return data;
 		}
 

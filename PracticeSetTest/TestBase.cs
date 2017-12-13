@@ -16,9 +16,10 @@ namespace PracticeSetTest
 
 		[SetUp]
 		public void TestInitialize()
-		{
-            driver = new ChromeDriver();
+		{			
+			driver = new ChromeDriver();
             hc.BrowseApplicationUrl();
+			driver.Manage().Window.Maximize();
 			hc.LogintoApplication("tester2", "kLSrQOa");
 		}
 
