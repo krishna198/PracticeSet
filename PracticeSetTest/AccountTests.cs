@@ -14,7 +14,7 @@ namespace PracticeSetTest
 	{
 		AccountPage ap = new AccountPage();
 		HelperClass hc = new HelperClass();
-		string path = @"DataSource\Data.xlsx";
+		string path = @"\\DataSource\\Data.xlsx";
 
 		[Test]
 		public void CreateAccountFromDataSource()
