@@ -47,13 +47,13 @@ namespace PracticeSetFramework
 			se.SelectByIndex(index);
 		}
 
-		public void WaitForElement(By element)
-		{
-			WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-			wait.Until(ExpectedConditions.ElementIsVisible(element));
-		}
+        public void WaitForElement(By element)
+        {
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            wait.Until(ExpectedConditions.ElementIsVisible(element));
+        }
 
-		public void WriteDataToExcelsheet(string path)
+        public void WriteDataToExcelsheet(string path)
 		{
 			Spreadsheet document = new Spreadsheet();
 

@@ -10,7 +10,7 @@ using PracticeSetOperations;
 namespace PracticeSetTest
 {
 	[TestFixture]
-	public class ContactTests
+	public class ContactTests : TestBase
 	{
 		BaseClass bc = new BaseClass();
 		AccountPage ap = new AccountPage();
