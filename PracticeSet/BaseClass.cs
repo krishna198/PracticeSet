@@ -14,16 +14,16 @@ namespace PracticeSetFramework
 	{
 		public static IWebDriver driver;
 
-		public IWebDriver InitializeChromeDriver(string path)
-		{
-			driver = new ChromeDriver(path);
-			return driver;
-		}
+		//public IWebDriver InitializeChromeDriver(string path)
+		//{
+		//	driver = new ChromeDriver(path);
+		//	return driver;
+		//}
 
-		public IWebDriver InitializeFirefoxDriver()
-		{
-			driver = new FirefoxDriver();
-			return driver;
-		}
+		//public IWebDriver InitializeFirefoxDriver()
+		//{
+		//	driver = new FirefoxDriver();
+		//	return driver;
+		//}
 	}
 }

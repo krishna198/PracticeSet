@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using PracticeSetFramework;
+using OpenQA.Selenium.Chrome;
 
 namespace PracticeSetTest
 {
@@ -16,8 +17,8 @@ namespace PracticeSetTest
 		[SetUp]
 		public void TestInitialize()
 		{
-			bc.InitializeFirefoxDriver();
-			hc.BrowseApplicationUrl();
+            driver = new ChromeDriver();
+            hc.BrowseApplicationUrl();
 			hc.LogintoApplication("tester2", "kLSrQOa");
 		}
 
