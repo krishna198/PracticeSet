@@ -18,10 +18,11 @@ namespace PracticeSetTest
 		HelperClass hc = new HelperClass();
 		ContactPage cp = new ContactPage();
 				
-		[Test, Ignore("Not implemented")]
+		[Test]
 		public void CreateContact()
 		{
 			ap.CreateAccount();
+            //Create contact not implmented
 		}
 
 		
