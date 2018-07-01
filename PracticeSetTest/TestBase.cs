@@ -6,21 +6,30 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using PracticeSetFramework;
 using OpenQA.Selenium.Chrome;
+using System.Configuration;
 
 namespace PracticeSetTest
-{
-	public class TestBase : BaseClass
+{    
+    public class TestBase : BaseClass
 	{
 		BaseClass bc = new BaseClass();
 		HelperClass hc = new HelperClass();
 
 		[SetUp]
 		public void TestInitialize()
-		{			
-			driver = new ChromeDriver();
-            hc.BrowseApplicationUrl();
-			driver.Manage().Window.Maximize();
-			hc.LogintoApplication("tester2", "kLSrQOa");
+		{
+            string browser = ConfigurationManager.AppSettings["Browser"].ToLower();
+            switch (browser)
+            {
+                case "chrome":
+                    driver = InitializeChromeDriver("chromedriver.exe");
+                    break;
+                case "firefox":
+                    driver = InitializeFirefoxDriver();
+                    break;
+            }
+            hc.BrowseApplicationUrl(ConfigurationManager.AppSettings["Url"]);
+            driver.Manage().Window.Maximize();
 		}
 
 		[TearDown]
@@ -28,5 +37,18 @@ namespace PracticeSetTest
 		{
 			hc.CloseDriver();
 		}
-	}
+
+
+        [OneTimeSetUp]
+        public void demo()
+        {
+
+        }
+
+        [OneTimeTearDown]
+        public void demo1()
+        {
+
+        }
+    }
 }

@@ -16,19 +16,17 @@ namespace PracticeSetFramework
 {
 	public class HelperClass : BaseClass
 	{
-		string applicationUrl = "http://buzzinglab.com/wr/";
+		string applicationUrl = "https://cygnet.hrinnova.com/";
 
-		public void BrowseApplicationUrl()
+		public void BrowseApplicationUrl(string url)
 		{
-			driver.Navigate().GoToUrl(applicationUrl);			
-		}
+           if(url == string.Empty || url == null)
+                driver.Navigate().GoToUrl(applicationUrl);
+           else
+                driver.Navigate().GoToUrl(url);
 
-		public void LogintoApplication(string userName, string password)
-		{
-			SetTextToField(driver.FindElement(By.Id("user_name")), userName);
-			SetTextToField(driver.FindElement(By.Id("user_password")), password);
-			driver.FindElement(By.Id("login_button")).Click();
-		}
+
+        }
 
 		public void SetTextToField(IWebElement element, string text)
 		{
@@ -81,5 +79,21 @@ namespace PracticeSetFramework
 		{
 			driver.Close();
 		}
+
+        //Generate random string
+        public string GenerateRandomString(int length)
+        {
+            string text = "";
+            Random random = new Random();
+            var characters = "abcdefghijklmnopqrstuvwxyz";
+            for (int i = 0; i < length; i++)
+            {                
+                text = text + characters[random.Next(characters.Length)];
+                if (i == 0)
+                    text = text[0].ToString().ToUpper();
+            }            
+            return text;
+        }
+
 	}
 }

@@ -7,6 +7,8 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support;
 using OpenQA.Selenium;
+using AventStack.ExtentReports.Utils;
+using AventStack.ExtentReports;
 
 namespace PracticeSetFramework
 {
@@ -14,16 +16,24 @@ namespace PracticeSetFramework
 	{
 		public static IWebDriver driver;
 
-		//public IWebDriver InitializeChromeDriver(string path)
-		//{
-		//	driver = new ChromeDriver(path);
-		//	return driver;
-		//}
+        public void ExtentObj()
+        {
+            var extent = new ExtentReports();            
+        }
 
-		//public IWebDriver InitializeFirefoxDriver()
-		//{
-		//	driver = new FirefoxDriver();
-		//	return driver;
-		//}
-	}
+
+        public IWebDriver InitializeChromeDriver(string path)
+        {
+            driver = new ChromeDriver();
+            return driver;
+        }
+
+        public IWebDriver InitializeFirefoxDriver()
+        {
+            driver = new FirefoxDriver();
+            return driver;
+        }
+
+
+    }
 }
