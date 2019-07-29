@@ -1,0 +1,9 @@
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\bin\Debug\PracticeSetElements.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\bin\Debug\PracticeSetElements.pdb
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\bin\Debug\WebDriver.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\bin\Debug\WebDriver.Support.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\bin\Debug\WebDriver.xml
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\bin\Debug\WebDriver.Support.xml
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\obj\Debug\PracticeSetElements.csprojResolveAssemblyReference.cache
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\obj\Debug\PracticeSetElements.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetElements\obj\Debug\PracticeSetElements.pdb

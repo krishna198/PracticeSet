@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSetFramework", "PracticeSet\PracticeSetFramework.csproj", "{743AFF97-7761-4750-8519-1C9C35EC338E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSetTest", "PracticeSetTest\PracticeSetTest.csproj", "{1C4B3D71-DFB9-4778-A612-7F42E07C51B9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A9E2DCFC-1AA9-459B-A318-405F1BA6DFA7} = {A9E2DCFC-1AA9-459B-A318-405F1BA6DFA7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSetOperations", "PracticeSetOperations\PracticeSetOperations.csproj", "{847EE10E-FAF1-4350-9905-979E665013AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSetElements", "PracticeSetElements\PracticeSetElements.csproj", "{A9E2DCFC-1AA9-459B-A318-405F1BA6DFA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +32,10 @@ Global
 		{847EE10E-FAF1-4350-9905-979E665013AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{847EE10E-FAF1-4350-9905-979E665013AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{847EE10E-FAF1-4350-9905-979E665013AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E2DCFC-1AA9-459B-A318-405F1BA6DFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E2DCFC-1AA9-459B-A318-405F1BA6DFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E2DCFC-1AA9-459B-A318-405F1BA6DFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E2DCFC-1AA9-459B-A318-405F1BA6DFA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,26 +12,17 @@ namespace PracticeSetTest
 {
     [TestFixture]
     public class LoginLogoutTest : TestBase
-    {
-        
-        //LoginLogout objLoginLogout = new LoginLogout();
-        
-        public LoginLogoutTest()
-        {
-            //PageFactory.InitElements(driver, objLoginLogout);
-            
-        }
+    {       
 
         [Test]
+        //[Description("This is the description for the test.")]
         public void LoginToApplication()
         {
             LoginLogout objLoginLogout = new LoginLogout();
             //PageFactory.InitElements(driver, objLoginLogout);
-            //new LoginLogout().LogintoApplication("krsinha", "Admin@@123");
-            objLoginLogout.Username.SendKeys("krsinha");
-            objLoginLogout.Password.SendKeys("Admin@@123");
-            objLoginLogout.LoginButton.Click();
-
+            new LoginLogout().LogintoApplication("krsinha", "Admin@@123");
+           
+            
             
             //ksks
             //mmdm

@@ -14,12 +14,13 @@ namespace PracticeSetTest
 	{
 		BaseClass bc = new BaseClass();
 		HelperClass hc = new HelperClass();
+        
 
-		[SetUp]
+        [SetUp]
 		public void TestInitialize()
 		{
             string browser = ConfigurationManager.AppSettings["Browser"].ToLower();
-            switch (browser)
+            switch (browser.ToLowerInvariant())
             {
                 case "chrome":
                     driver = InitializeChromeDriver("chromedriver.exe");
@@ -28,6 +29,7 @@ namespace PracticeSetTest
                     driver = InitializeFirefoxDriver();
                     break;
             }
+            driver.Url = "http://blog.testproject.io/";
             hc.BrowseApplicationUrl(ConfigurationManager.AppSettings["Url"]);
             driver.Manage().Window.Maximize();
 		}
@@ -39,13 +41,13 @@ namespace PracticeSetTest
 		}
 
 
-        [OneTimeSetUp]
+        [SetUp]
         public void demo()
         {
 
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void demo1()
         {
 
