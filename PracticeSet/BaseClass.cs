@@ -1,30 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support;
 using OpenQA.Selenium;
-using AventStack.ExtentReports.Utils;
-using AventStack.ExtentReports;
+//using AventStack.ExtentReports;
+using System.Configuration;
+//using OpenQA.Selenium.Support;
 
 namespace PracticeSetFramework
 {
-	public class BaseClass
+    public class BaseClass
 	{
 		public static IWebDriver driver;
 
         public void ExtentObj()
         {
-            var extent = new ExtentReports();            
+            //var extent = new ExtentReports();            
         }
+
+        public double timeout = Convert.ToDouble(ConfigurationManager.AppSettings["Timeout"]);
 
 
         public IWebDriver InitializeChromeDriver(string path)
         {
+            ChromeOptions options = new ChromeOptions();
             driver = new ChromeDriver();
+            var te = ConfigurationManager.AppSettings["Timeout"];
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
             return driver;
         }
 
@@ -32,6 +33,12 @@ namespace PracticeSetFramework
         {
             driver = new FirefoxDriver();
             return driver;
+        }
+
+        public By GenerateFormattedLocator(By loc, params string[] val)
+        {
+            By value = null;
+            return value;
         }
 
 
