@@ -1,1 +1,14 @@
 C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\obj\Debug\PracticeSetOperations.csprojResolveAssemblyReference.cache
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\PracticeSetOperations.dll.config
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\PracticeSetOperations.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\PracticeSetOperations.pdb
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\PracticeSet.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\PracticeSetElements.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\WebDriver.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\WebDriver.Support.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\PracticeSetElements.pdb
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\PracticeSet.pdb
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\WebDriver.xml
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\bin\Debug\WebDriver.Support.xml
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\obj\Debug\PracticeSetOperations.dll
+C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSetOperations\obj\Debug\PracticeSetOperations.pdb

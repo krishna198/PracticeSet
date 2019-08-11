@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PracticeSetOperations;
 using OpenQA.Selenium.Support.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using PracticeSetTest.PracticeSetOperations;
 
 namespace PracticeSetTest
 {
@@ -15,18 +15,13 @@ namespace PracticeSetTest
     {       
 
         [Test]
-        //[Description("This is the description for the test.")]
+        [Description("Login to HRInnova")]
         public void LoginToApplication()
         {
-            LoginLogout objLoginLogout = new LoginLogout();
+            LoginLogoutPO objLoginLogout = new LoginLogoutPO();
             //PageFactory.InitElements(driver, objLoginLogout);
-            new LoginLogout().LogintoApplication("krsinha", "Admin@@123");
+            new LoginLogoutPO().LogintoApplication("krsinha", "Admin@@123");
            
-            
-            
-            //ksks
-            //mmdm
-            //lllss
         }
     }
 }

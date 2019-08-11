@@ -16,15 +16,15 @@ namespace PracticeSetFramework
 {
 	public class HelperClass : BaseClass
 	{
-		string applicationUrl = "https://cygnet.hrinnova.com/";
+		//string applicationUrl = "https://cygnet.hrinnova.com/";
 
 		public void BrowseApplicationUrl(string url)
 		{
-           if(url == string.Empty || url == null)
-                driver.Navigate().GoToUrl(applicationUrl);
-           else
-                driver.Navigate().GoToUrl(url);
-
+            //if(url == string.Empty || url == null)
+            //     driver.Navigate().GoToUrl(applicationUrl);
+            //else
+            //     driver.Navigate().GoToUrl(url);
+            driver.Navigate().GoToUrl(url);
 
         }
 
@@ -50,7 +50,19 @@ namespace PracticeSetFramework
             driver.FindElement(locator).Click();
         }
 
+        public void ClickElementByJavascript(By by)
+        {
+            IWebElement element = driver.FindElement(by);
+            IJavaScriptExecutor js = ((IJavaScriptExecutor)driver);
+            js.ExecuteScript("arguments[0].click();", element);
+        }
+
         #endregion
+
+        public string GetAttribute(By element, string attributeName)
+        {
+            return driver.FindElement(element).GetAttribute(attributeName);
+        }
 
         public void SetTextToField(IWebElement element, string text)
 		{

@@ -73,9 +73,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginLogoutTest.cs" />
+    <Compile Include="PageElements\LoginLogoutPE.cs" />
+    <Compile Include="PageElements\YahooPE.cs" />
+    <Compile Include="PageOperations\LoginLogoutPO.cs" />
+    <Compile Include="PageOperations\YahooPO.cs" />
+    <Compile Include="Tests\LoginLogoutTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBase.cs" />
+    <Compile Include="Tests\YahooTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -89,10 +94,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PracticeSetOperations\PracticeSetOperations.csproj">
-      <Project>{847ee10e-faf1-4350-9905-979e665013af}</Project>
-      <Name>PracticeSetOperations</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PracticeSet\PracticeSetFramework.csproj">
       <Project>{743aff97-7761-4750-8519-1c9c35ec338e}</Project>
       <Name>PracticeSetFramework</Name>
