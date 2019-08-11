@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginLogout.cs" />
+    <Compile Include="LoginLogoutPO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,10 +77,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PracticeSetElements\PracticeSetElements.csproj">
-      <Project>{a9e2dcfc-1aa9-459b-a318-405f1ba6dfa7}</Project>
-      <Name>PracticeSetElements</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PracticeSet\PracticeSetFramework.csproj">
       <Project>{743aff97-7761-4750-8519-1c9c35ec338e}</Project>
       <Name>PracticeSetFramework</Name>

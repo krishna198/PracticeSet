@@ -10,4 +10,3 @@ C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSet\bin\Debug\WebDriver.Support
 C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSet\obj\Debug\PracticeSetFramework.csproj.ResolveComReference.cache
 C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSet\obj\Debug\PracticeSet.dll
 C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSet\obj\Debug\PracticeSet.pdb
-C:\Users\ksinha\Source\Repos\PracticeSet\PracticeSet\obj\Debug\PracticeSetFramework.csprojResolveAssemblyReference.cache

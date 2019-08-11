@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace PracticeSetElements
+namespace PracticeSetTest.PracticeSetElements
 {
     public class LoginLogoutPE
     {

@@ -10,7 +10,7 @@ using PracticeSetElements;
 
 namespace PracticeSetOperations
 {
-	public class LoginLogout : HelperClass
+	public class LoginLogoutPO : HelperClass
 	{
         LoginLogoutPE objLoginLogoutPE = new LoginLogoutPE();
         /*

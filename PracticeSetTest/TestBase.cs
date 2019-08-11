@@ -29,8 +29,8 @@ namespace PracticeSetTest
                     driver = InitializeFirefoxDriver();
                     break;
             }
-            driver.Url = "http://blog.testproject.io/";
-            hc.BrowseApplicationUrl(ConfigurationManager.AppSettings["Url"]);
+            driver.Url = "https://in.yahoo.com/";
+            //hc.BrowseApplicationUrl(ConfigurationManager.AppSettings["Url"]);
             driver.Manage().Window.Maximize();
 		}
 
