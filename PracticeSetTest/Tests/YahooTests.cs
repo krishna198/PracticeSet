@@ -16,10 +16,7 @@ namespace PracticeSetTest
         [Test]
         public void YahooTest1()
         {
-            //driver.Url = "https://in.yahoo.com/";
-
-
-            objYahooPO.LoginToYahoo("krishna_sinha84@yahoo.co.in", "StrongPassword01*");
+            objYahooPO.LoginToYahoo("krishna_sinha84@yahoo.co.in", "");
 
             //delete the emails
             objYahooPO.DeleteUnwantedEmails();
